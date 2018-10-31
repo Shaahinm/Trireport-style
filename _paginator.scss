@@ -1,0 +1,83 @@
+.table-content-wrapper.report-table.paginator-no-shadow {
+
+    .ui-paginator.ui-paginator-top,
+    .ui-paginator.ui-paginator-bottom {
+        box-shadow: none;
+    }
+
+}
+
+.ui-paginator.ui-paginator-top,
+.ui-paginator.ui-paginator-bottom {
+    height: $navbar-height;
+    padding: 0;
+    line-height: $navbar-height;
+    margin: 0;
+    background: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // box-shadow: 0px 15px 17px -20px rgba(0, 0, 0, 0.75);
+    
+    .ui-paginator-current {
+        font-size: 13px;
+        color: #999;
+    }
+
+    .ui-paginator-next {        
+        background: url('/dC/resources/images/arrow-right.svg') no-repeat center;
+        height: 24px;
+        line-height: 24px;
+        display: flex;
+        flex: 0 0 24px;
+
+        &.ui-state-disabled {
+            background: none;
+            background-color: #999;            
+        }
+    }
+
+    .ui-paginator-prev {
+        background: url('/dC/resources/images/arrow-left.svg') no-repeat center;
+        height: 24px;
+        line-height: 24px;
+        display: flex;
+        flex: 0 0 24px;
+
+        &.ui-state-disabled {
+            background: none;
+            background-color: #999;            
+        }
+    }
+
+    .ui-paginator-page {
+        font-weight: 500;
+        font-size: 14px;
+        width: 28px;
+    }
+
+    .ui-state-active,
+    .ui-state-hover {
+        color: $blue;
+    }
+
+    select {
+        width: 50px;
+        height: $form-input-height;
+        border: 1px solid #ddd;
+        background: #eee;
+        display: none;
+    }
+}
+
+.exporter {
+    position: absolute;
+    right: 1em;
+    display: flex;
+
+    a {
+        display: flex;
+        align-items: center;
+
+    }
+}

@@ -1,0 +1,87 @@
+.summary-section {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: white;
+    transition: all 0.5s;
+
+    .header-section {
+        display: flex;
+        width: 100%;
+        padding: 0 48px;
+
+
+        .container-header {
+            display: flex;
+            flex-wrap: wrap;
+            border-left: 1px solid #eee;
+            width: 100%;
+
+            .section {
+                display: flex;
+                flex: 1;
+                padding: 36px 24px;
+                border-right: 1px solid #eee;
+                flex-direction: column;
+                justify-content: center;
+                animation: all 0.5s;
+                min-width: 298px;
+                flex-wrap: wrap;
+                border-top: 1px solid #eee;
+
+                .header {
+                    font-size: 1.5em;
+                    font-weight: 700;
+                }
+
+                .label {
+                    font-size: 1em;
+                    color: #aaa;
+                    font-weight: 500;
+                    height: 24px;
+                    line-height: 24px;
+                }
+
+                .number {
+                    font-weight: 500;
+                    font-size: 1.1em;
+                }
+            }
+        }
+    }
+
+    &.max-wrapper {
+        max-width: 1600px;
+    }
+
+    margin-bottom: 16px;
+    background: $white;
+
+    .filters {
+        display: flex;
+        height: $navbar-height;
+        align-items: center;
+        box-shadow: 1px 9px 35px -12px rgba(0, 0, 0, 0.75);
+        border-top: 1px solid #eee;
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+
+            .inner {
+                flex: 1;
+                padding: 0 24px 0 16px;
+
+                .ui-selectonemenu {
+                    margin: 0 24px;
+                }
+            }
+
+            .reset-button {}
+        }
+
+    }
+}
