@@ -153,7 +153,12 @@
             border: 0;
             background: transparent;   
             width: 100%;
-            text-align: left;         
+            text-align: left;  
+            &.ui-button-text-only {
+              .ui-button-text {
+                color: rgba(0, 0, 0, 0.9);
+              }       
+            }
         }
         &:hover {
             background: #ddd;       

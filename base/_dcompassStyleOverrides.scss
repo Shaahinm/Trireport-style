@@ -1,51 +1,86 @@
 html {
-    .ui-outputpanel.ui-widget.mainContainer {
-        margin: 10px;
-    }
+  .ui-outputpanel.ui-widget.mainContainer {
+    margin: 10px;
+  }
 
-    .ui-datatable table thead tr th,
-    .ui-datatable table tfoot tr td,
-    .ui-datatable table thead tr th {
-        background: transparent;
-    }
+  .ui-datatable table thead tr th,
+  .ui-datatable table tfoot tr td,
+  .ui-datatable table thead tr th {
+    background: transparent;
+  }
 
-    .ui-datatable table thead tr th.ui-state-hover,
-    .ui-datatable table thead tr th.ui-state-active,
-    .ui-datatable .ui-datatable-sticky table thead tr th.ui-state-hover,
-    .ui-datatable .ui-datatable-sticky table thead tr th.ui-state-active {
-        background-color: transparent !important;
-    }
+  .ui-datatable table thead tr th.ui-state-hover,
+  .ui-datatable table thead tr th.ui-state-active,
+  .ui-datatable .ui-datatable-sticky table thead tr th.ui-state-hover,
+  .ui-datatable .ui-datatable-sticky table thead tr th.ui-state-active {
+    background-color: transparent !important;
+  }
 
-    .ui-paginator .ui-paginator-first,
-    .ui-paginator .ui-paginator-prev,
-    .ui-paginator .ui-paginator-pages .ui-paginator-page,
-    .ui-paginator .ui-paginator-next,
-    .ui-paginator .ui-paginator-last,
-    .ui-paginator .ui-paginator-rpp-options {
-        padding: 0 !important;
-        border: none;
-    }
+  .ui-paginator .ui-paginator-first,
+  .ui-paginator .ui-paginator-prev,
+  .ui-paginator .ui-paginator-pages .ui-paginator-page,
+  .ui-paginator .ui-paginator-next,
+  .ui-paginator .ui-paginator-last,
+  .ui-paginator .ui-paginator-rpp-options {
+    padding: 0 !important;
+    border: none;
+  }
 
-    .ui-datatable table thead tr th.ui-state-focus {
-        box-shadow: none;
-        -webkit-box-shadow: none;
-    }
+  .ui-inputfield {
+    background: $white;
+    border-bottom: 0;
+  }
 
-    .ui-selectonemenu .ui-selectonemenu-trigger,
-    .ui-selectcheckboxmenu .ui-selectcheckboxmenu-trigger {
-        border-bottom: 0 !important;
-        background-color: white !important;
-    }
+  .ui-selectonemenu.ui-state-focus .ui-selectonemenu-label {
+  }
 
-    .ui-selectcheckboxmenu .ui-selectcheckboxmenu-trigger.ui-state-hover,
-    .ui-selectcheckboxmenu .ui-selectcheckboxmenu-trigger.ui-state-focus,
-    .ui-selectonemenu .ui-selectonemenu-trigger.ui-state-hover,
-    .ui-selectonemenu .ui-selectonemenu-trigger.ui-state-focus {
-        border-bottom: 0 !important;
-        background-color: white;
-    }
+  .ui-selectonemenu.ui-state-focus,
+  .ui-selectcheckboxmenu.ui-state-focus {
+    border: 0;
+  }
 
-    .ui-selectonemenu, .ui-selectcheckboxmenu {
-        padding: 0 24px 0 0 !important;
-    }
+  .ui-selectcheckboxmenu .ui-selectcheckboxmenu-label {
+    background: $white;
+    padding: 9px !important;
+  }
+
+  .ui-datatable table thead tr th.ui-state-focus {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+  }
+
+  .ui-selectonemenu,
+  .ui-selectcheckboxmenu {
+    border: 0 !important;
+  }
+
+  .ui-selectonemenu .ui-selectonemenu-trigger,
+  .ui-selectcheckboxmenu .ui-selectcheckboxmenu-trigger {
+    border-bottom: 0 !important;
+    background-color: transparent !important;
+  }
+
+  .ui-selectcheckboxmenu .ui-selectcheckboxmenu-trigger.ui-state-hover,
+  .ui-selectcheckboxmenu .ui-selectcheckboxmenu-trigger.ui-state-focus,
+  .ui-selectonemenu .ui-selectonemenu-trigger.ui-state-hover,
+  .ui-selectonemenu .ui-selectonemenu-trigger.ui-state-focus {
+    border-bottom: 0 !important;
+    background-color: transparent;
+  }
+
+  .ui-selectonemenu,
+  .ui-selectcheckboxmenu {
+    padding: 0 4px 0 0 !important;
+    margin: 0 16px 0 0;
+  }
+
+  .ui-selectonemenu-trigger .ui-icon-triangle-1-s,
+  .ui-selectcheckboxmenu-trigger .ui-icon-triangle-1-s {
+    background-image: url("/dC/resources/images/dropdown-arrow-down.svg");
+  }
+
+  .ui-selectonemenu.ui-state-focus,
+  .ui-selectcheckboxmenu.ui-state-focus {
+    border-bottom: none;
+  }
 }

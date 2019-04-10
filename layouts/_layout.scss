@@ -1,7 +1,42 @@
-.body-wrapper {
-  padding-top: $navbar-height;
-  margin-left: 0;
-  @media only screen and (min-width: 880px) {
-    margin-left: $mini-sidebar-width;
+.flex-center {
+  > div {
+    display: flex;
+    align-items: center;
+    height: 64px;
+    padding: 0 !important;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+  }
+  display: flex;
+  align-items: center;
+  height: 64px;
+  padding: 0 !important;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.fw-120,
+.hasDatepicker {
+  width: 120px;
+}
+
+.row {
+  padding: 20px 8px;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  background: $white;
+  -webkit-box-shadow: 1px 5px 10px 5px rgba(170, 170, 170, 1);
+  -moz-box-shadow: 1px 5px 10px 5px rgba(170, 170, 170, 1);
+  box-shadow: 1px 5px 10px 5px rgba(170, 170, 170, 1);
+
+  &.row-two-column {
+    .column {
+      display: inline-block;
+      width: 49.5%;
+      vertical-align: middle;
+    }
   }
 }

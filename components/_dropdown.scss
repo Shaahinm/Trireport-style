@@ -1,3 +1,4 @@
+
 .dropdown {
     &:focus {
         outline: 1px solid rgba(81,184,242, 0.5);
@@ -17,10 +18,11 @@
     &.ui-selectonemenu {
         &.no-border {
             border: 0 !important;
-            // min-width: 110px;
+            min-width: 110px;
+            width: auto !important;
 
             .ui-selectonemenu-trigger {
-                right: -10px;
+                right: 0;
             }
         }
 
@@ -57,7 +59,7 @@
 
         display: inline-block;
         position: relative;
-        width: auto;
+        width: auto !important;
         zoom: 1;
         cursor: pointer;
         padding-right: 0;
@@ -76,7 +78,7 @@
         &.svg {
             color: #333 !important;
             .ui-selectonemenu-trigger {
-                width: 24px;                
+                width: 24px;
 
                 &.ui-state-hover {
                     background: $white;

@@ -27,7 +27,7 @@
                         th {
                             .ui-column-title {
                                 font-weight: 500;
-                                color: #999;
+                                color: black;
                             }
                         }
                     }
@@ -62,13 +62,13 @@
                     box-shadow: inset 0px 15px 17px -20px rgba(0, 0, 0, 0.75);
 
                     th {
-                        padding: 20px 34px;
+                        // padding: 20px 34px;
                         // @media screen and (max-width: 1120px) {
                         //     padding: 20px 14px;
                         // }
                         overflow: hidden;
                         border: 0;
-                        line-height: 16px;
+                        line-height: 32px;
 
                         &.inout-column {
                             text-align: center;
@@ -187,19 +187,19 @@
                         &.ui-sortable-column {
                             .ui-sortable-column-icon.ui-icon.ui-icon-carat-2-n-s {
                                 display: inline-block;
-                                // background: url('/dC/resources/images/sort-arrow.png') no-repeat center;
-                                height: 24px;
-                                line-height: 24px;
-                                width: 24px;
+                                background: url('/dC/resources/images/sort-arrow.png') no-repeat center;
+                                height: 20px;
+                                line-height: 20px;
+                                width: 20px;
                                 top: 5px;
-                                background-size: contain;
+                                background-size: contain;                                
                                 &.ui-icon-triangle-1-n {
-                                    // background: url('/dC/resources/images/sort-arrow-asc.png') no-repeat center;
+                                    background: url('/dC/resources/images/sort-arrow-asc.png') no-repeat center;
                                     background-size: contain;
                                 }
 
                                 &.ui-icon-triangle-1-s {
-                                    // background: url('/dC/resources/images/sort-arrow-desc.png') no-repeat center;
+                                    background: url('/dC/resources/images/sort-arrow-desc.png') no-repeat center;
                                     background-size: contain;
                                 }
                             }
@@ -210,7 +210,7 @@
 
             .ui-datatable-data {
                 tr {
-                    height: 56px;
+                    // height: 56px;
                     background-color: white;
                     border-bottom: 1px solid #eee;
 
@@ -223,6 +223,7 @@
                     td {
                         border: 0;
                         padding: 8px 34px;
+                        line-height: 32px;
                         font-size: 0.9em;
                         &.inout-column {
                             text-align: center;
@@ -332,16 +333,18 @@
     }
     .filter-slider {        
         width: 300px;
-        display: flex;
+        // display: flex !important;
         align-content: center;
         justify-content: center;
         padding: 24px;
         background: $white;
         right: -350px;
+        background: #eee;
         position: fixed;
-        transition: right 0.5s;
-        top: 64px;
+        transition: right 0.5s;        
         box-shadow: 1px 9px 35px -12px rgba(0, 0, 0, 0.75);
+        height: 100%;
+        overflow-y: scroll;
         &.show {
             right: 0;
         }
@@ -360,6 +363,15 @@
             .bottom {
                 font-size: 0.9em;
                 color: #999;
+            }
+        }
+
+        .fixed-first-td {
+            tr > td:first-child {
+                width: 40px;
+            }
+            tr > td:not(:first-child) {
+                text-align: left;
             }
         }
     }
