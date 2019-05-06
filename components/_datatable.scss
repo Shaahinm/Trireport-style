@@ -1,380 +1,433 @@
 .table-controls {
-    display: flex;
-    justify-content: space-between;
-    height: $navbar-height;
-    background: $white;
-    align-items: center;
-    box-shadow: 1px 9px 35px -12px rgba(0, 0, 0, 0.75);
-    padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  height: $navbar-height;
+  background: $white;
+  align-items: center;
+  box-shadow: 1px 9px 35px -12px rgba(0, 0, 0, 0.75);
+  padding: 0 24px;
 }
 
 .table-filter-wrapper {
-    display: none;
+  display: none;
 }
 
 .table-content-wrapper {
-    display: flex;
-    height: 100%;
-    &.report-table {
-        .ui-datatable {
-            table {
-                thead {
-                    tr {
-                        background-color: $white;
-                        box-shadow: none;
-                        border-bottom: 1px solid #eee;
-
-                        th {
-                            .ui-column-title {
-                                font-weight: 500;
-                                color: black;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    &.no-shadow {
-        .ui-datatable {
-            table {
-                thead {
-                    tr {
-                        box-shadow: none;
-                    }
-                }
-            }
-        }
-    }
-
+  display: flex;
+  height: 100%;
+  &.report-table {
     .ui-datatable {
-        table {
-            // font-size: 15px;
-            // @media screen and (max-width: 600) {
-            //     font-size: 13px;
+      table {
+        thead {
+          tr {
+            background-color: $white;
+            box-shadow: none;
+            border-bottom: 1px solid #eee;
+
+            th {
+              .ui-column-title {
+                font-weight: 500;
+                color: #bbb;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.no-shadow {
+    .ui-datatable {
+      table {
+        thead {
+          tr {
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+
+  .ui-datatable {
+    table {
+      // font-size: 15px;
+      // @media screen and (max-width: 600) {
+      //     font-size: 13px;
+      // }
+      border: 0;
+
+      thead {
+        tr {
+          background-color: #f9f9f9;
+          box-shadow: inset 0px 15px 17px -20px rgba(0, 0, 0, 0.75);
+
+          th {
+            // padding: 20px 34px;
+            // @media screen and (max-width: 1120px) {
+            //     padding: 20px 14px;
             // }
+            overflow: hidden;
             border: 0;
+            line-height: 32px;
+            cursor: move;
 
-            thead {
-                tr {
-                    background-color: #f9f9f9;
-                    box-shadow: inset 0px 15px 17px -20px rgba(0, 0, 0, 0.75);
+            &.inout-column {
+              text-align: center;
+              padding: 20px 8px;
+              width: 60px;
 
-                    th {
-                        // padding: 20px 34px;
-                        // @media screen and (max-width: 1120px) {
-                        //     padding: 20px 14px;
-                        // }
-                        overflow: hidden;
-                        border: 0;
-                        line-height: 32px;
+              @media screen and (min-width: 800px) {
+                padding: 20px 16px;
+                width: 70px;
+              }
 
-                        &.inout-column {
-                            text-align: center;
-                            padding: 20px 8px;
-                            width: 60px;
+              @media screen and (min-width: 1200px) {
+                width: 112px;
+                padding: 20px 34px;
+              }
 
-                            @media screen and (min-width: 800px) {
-                                padding: 20px 16px;
-                                width: 70px;
-                            }
+              .in {
+                color: $green;
+              }
 
-                            @media screen and (min-width: 1200px) {
-                                width: 112px;
-                                padding: 20px 34px;
-                            }
-
-                            .in {
-                                color: $green;
-                            }
-
-                            .out {
-                                color: $red;
-                            }
-                        }
-
-                        &.ccy-column {
-                            text-align: center;
-                            padding: 20px 8px;
-                            width: 50px;
-
-                            @media screen and (min-width: 800px) {
-                                padding: 20px 16px;
-                                width: 60px;
-                            }
-
-                            @media screen and (min-width: 1200px) {
-                                width: 100px;
-                                padding: 20px 34px;
-                            }
-                        }
-
-                        &.date-column {
-                            text-align: center;
-                            padding: 20px 8px;
-                            width: 110px;
-
-                            @media screen and (min-width: 800px) {
-                                padding: 20px 16px;
-                                width: 126px;
-                            }
-
-                            @media screen and (min-width: 1200px) {
-                                width: 192px;
-                                padding: 20px 34px;
-                            }
-                        }
-
-                        &.day-column {
-                            text-align: center;
-                            padding: 20px 8px;
-                            width: 86px;
-
-                            @media screen and (min-width: 800px) {
-                                padding: 20px 16px;
-                                width: 102px;
-                            }
-
-                            @media screen and (min-width: 1200px) {
-                                width: 180px;
-                                padding: 20px 34px;
-                            }
-                        }
-
-                        &.settlement-amount-column {
-                            text-align: right;
-                            padding: 20px 8px;
-                            min-width: 140px;
-
-                            @media screen and (min-width: 800px) {
-                                padding: 20px 16px;
-                                min-width: 155px;
-                            }
-
-                            @media screen and (min-width: 1200px) {
-                                min-width: 210px;
-                                padding: 20px 34px;
-                            }
-                        }
-
-                        &.fw-90 {
-                            width: 90px;
-                        }
-
-                        &.fw-140 {
-                            width: 140px;
-                        }
-
-                        &.fw-165 {
-                            width: 165px;
-                        }
-
-                        .ui-column-title {
-                            font-size: 14px;
-                            font-weight: 500;
-                            color: rgba(0, 0, 0, 0.7);
-                        }
-
-                        &.left-aligned {
-                            text-align: left;
-                        }
-
-                        &.right-aligned {
-                            text-align: right;
-                        }
-
-                        &.ui-sortable-column {
-                            .ui-sortable-column-icon.ui-icon.ui-icon-carat-2-n-s {
-                                display: inline-block;
-                                background: url('/dC/resources/images/sort-arrow.png') no-repeat center;
-                                height: 20px;
-                                line-height: 20px;
-                                width: 20px;
-                                top: 5px;
-                                background-size: contain;                                
-                                &.ui-icon-triangle-1-n {
-                                    background: url('/dC/resources/images/sort-arrow-asc.png') no-repeat center;
-                                    background-size: contain;
-                                }
-
-                                &.ui-icon-triangle-1-s {
-                                    background: url('/dC/resources/images/sort-arrow-desc.png') no-repeat center;
-                                    background-size: contain;
-                                }
-                            }
-                        }
-                    }
-                }
+              .out {
+                color: $red;
+              }
             }
 
-            .ui-datatable-data {
-                tr {
-                    // height: 56px;
-                    background-color: white;
-                    border-bottom: 1px solid #eee;
+            &.ccy-column {
+              text-align: center;
+              padding: 20px 8px;
+              width: 50px;
 
-                    &.ui-state-hover,
-                    &.ui-state-highlight {
-                        background: $blue;
-                        color: $white;
-                    }
+              @media screen and (min-width: 800px) {
+                padding: 20px 16px;
+                width: 60px;
+              }
 
-                    td {
-                        border: 0;
-                        padding: 8px 34px;
-                        line-height: 32px;
-                        font-size: 0.9em;
-                        &.inout-column {
-                            text-align: center;
-                            padding: 20px 8px;
-                            width: 60px;
-
-                            @media screen and (min-width: 800px) {
-                                width: 70px;
-                                padding: 20px 16px;
-                            }
-
-                            @media screen and (min-width: 1200px) {
-                                width: 112px;
-                                padding: 20px 34px;
-                            }
-                        }
-
-                        &.ccy-column {
-                            text-align: center;
-                            padding: 20px 8px;
-                            width: 50px;
-
-                            @media screen and (min-width: 800px) {
-                                padding: 20px 16px;
-                                width: 70px;
-                            }
-
-                            @media screen and (min-width: 1200px) {
-                                width: 112px;
-                                padding: 20px 34px;
-                            }
-                        }
-
-                        &.date-column {
-                            text-align: center;
-                            padding: 20px 8px;
-                            width: 110px;
-
-                            @media screen and (min-width: 800px) {
-                                padding: 20px 16px;
-                                width: 126px;
-                            }
-
-                            @media screen and (min-width: 1200px) {
-                                width: 192px;
-                                padding: 20px 34px;
-                            }
-                        }
-
-                        &.day-column {
-                            text-align: center;
-                            padding: 20px 8px;
-                            width: 86px;
-
-                            @media screen and (min-width: 800px) {
-                                padding: 20px 16px;
-                                width: 102px;
-                            }
-
-                            @media screen and (min-width: 1200px) {
-                                width: 180px;
-                                padding: 20px 34px;
-                            }
-                        }
-
-                        &.settlement-amount-column {
-                            text-align: right;
-                            padding: 20px 8px;
-                            min-width: 140px;
-
-                            @media screen and (min-width: 800px) {
-                                padding: 20px 16px;
-                                min-width: 155px;
-                            }
-
-                            @media screen and (min-width: 1200px) {
-                                min-width: 210px;
-                                padding: 20px 34px;
-                            }
-                        }
-                    }
-                }
+              @media screen and (min-width: 1200px) {
+                width: 100px;
+                padding: 20px 34px;
+              }
             }
+
+            &.date-column {
+              text-align: center;
+              padding: 20px 8px;
+              width: 110px;
+
+              @media screen and (min-width: 800px) {
+                padding: 20px 16px;
+                width: 126px;
+              }
+
+              @media screen and (min-width: 1200px) {
+                width: 192px;
+                padding: 20px 34px;
+              }
+            }
+
+            &.day-column {
+              text-align: center;
+              padding: 20px 8px;
+              width: 86px;
+
+              @media screen and (min-width: 800px) {
+                padding: 20px 16px;
+                width: 102px;
+              }
+
+              @media screen and (min-width: 1200px) {
+                width: 180px;
+                padding: 20px 34px;
+              }
+            }
+
+            &.settlement-amount-column {
+              text-align: right;
+              padding: 20px 8px;
+              min-width: 140px;
+
+              @media screen and (min-width: 800px) {
+                padding: 20px 16px;
+                min-width: 155px;
+              }
+
+              @media screen and (min-width: 1200px) {
+                min-width: 210px;
+                padding: 20px 34px;
+              }
+            }
+
+            &.fw-90 {
+              width: 90px;
+            }
+
+            &.fw-140 {
+              width: 140px;
+            }
+
+            &.fw-165 {
+              width: 165px;
+            }
+
+            .ui-column-title {
+              font-size: 14px;
+              font-weight: 500;
+              color: rgba(0, 0, 0, 0.7);
+            }
+
+            &.left-aligned {
+              text-align: left;
+            }
+
+            &.right-aligned {
+              text-align: right;
+            }
+
+            &.ui-sortable-column {
+              .ui-sortable-column-icon.ui-icon.ui-icon-carat-2-n-s {
+                display: inline-block;
+                background: url("/dC/resources/images/sort-arrow.png") no-repeat
+                  center;
+                height: 20px;
+                line-height: 20px;
+                width: 20px;
+                top: 5px;
+                background-size: contain;
+                &.ui-icon-triangle-1-n {
+                  background: url("/dC/resources/images/sort-arrow-asc.png")
+                    no-repeat center;
+                  background-size: contain;
+                }
+
+                &.ui-icon-triangle-1-s {
+                  background: url("/dC/resources/images/sort-arrow-desc.png")
+                    no-repeat center;
+                  background-size: contain;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .ui-datatable-data {
+        tr {
+          height: 56px;
+          background-color: white;
+          border-top: 1px solid #eee;
+
+          &.ui-state-hover,
+          &.ui-state-highlight {
+            background: $blue;
+            color: $white;
+          }
+
+          td {
+            border: 0;
+            padding: 8px 34px !important;
+            // line-height: 32px;
+            font-size: 0.9em;
+            &.inout-column {
+              text-align: center;
+              padding: 20px 8px;
+              width: 60px;
+
+              @media screen and (min-width: 800px) {
+                width: 70px;
+                padding: 20px 16px !important;
+              }
+
+              @media screen and (min-width: 1200px) {
+                width: 112px;
+                padding: 20px 34px !important;
+              }
+            }
+
+            &.ccy-column {
+              text-align: center;
+              padding: 20px 8px !important;
+              width: 50px;
+
+              @media screen and (min-width: 800px) {
+                padding: 20px 16px !important;
+                width: 70px;
+              }
+
+              @media screen and (min-width: 1200px) {
+                width: 112px;
+                padding: 20px 34px !important;
+              }
+            }
+
+            &.date-column {
+              text-align: center;
+              padding: 20px 8px !important;
+              width: 110px;
+
+              @media screen and (min-width: 800px) {
+                padding: 20px 16px !important;
+                width: 126px;
+              }
+
+              @media screen and (min-width: 1200px) {
+                width: 192px;
+                padding: 20px 34px !important;
+              }
+            }
+
+            &.day-column {
+              text-align: center;
+              padding: 20px 8px !important;
+              width: 86px;
+
+              @media screen and (min-width: 800px) {
+                padding: 20px 16px !important;
+                width: 102px;
+              }
+
+              @media screen and (min-width: 1200px) {
+                width: 180px;
+                padding: 20px 34px !important;
+              }
+            }
+
+            &.settlement-amount-column {
+              text-align: right;
+              padding: 20px 8px !important;
+              min-width: 140px;
+
+              @media screen and (min-width: 800px) {
+                padding: 20px 16px !important;
+                min-width: 155px;
+              }
+
+              @media screen and (min-width: 1200px) {
+                min-width: 210px;
+                padding: 20px 34px !important;
+              }
+            }
+          }
+        }
+      }
+
+      tbody {
+        .ui-state-hover {
+          > td {
+            background: $blue;
+            color: $white;
+          }
+        }
+      }
+    }
+
+    .ui-datatable-header {
+      display: flex;
+      background: $white;
+      border-bottom: 1px solid #eee;
+      height: $navbar-height;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      .table-name {
+        font-size: 1.2em;
+      }
+
+      .table-options {
+        display: flex;
+
+        .option {
+          margin: 0 8px;
+          i.material-icons {
+            color: rgba(0, 0, 0, 0.55);
+          }
+          .ui-commandlink {
+            display: flex;
+            justify-content: center;
+            i.material-icons {
+              color: rgba(0, 0, 0, 0.55);
+            }
+          }
+        }
+      }
+    }
+
+    .ui-datatable-tablewrapper {
+      padding-left: 8px;
+    }
+  }
+  .filter-slider {
+    width: 300px;
+    // display: flex !important;
+    align-content: center;
+    justify-content: center;
+    padding: 24px;
+    background: $white;
+    right: -350px;
+    background: #eee;
+    position: fixed;
+    transition: right 0.5s;
+    box-shadow: 1px 9px 35px -12px rgba(0, 0, 0, 0.75);
+    height: 100%;
+    overflow-y: scroll;
+    &.show {
+      right: 0;
+    }
+
+    .close {
+      display: flex;
+      flex-direction: column;
+      .top {
+        display: flex;
+        justify-content: space-between;
+        i {
+          cursor: pointer;
+        }
+      }
+
+      .bottom {
+        font-size: 0.9em;
+        color: #999;
+      }
+    }
+
+    .fixed-first-td {
+      tr > td:first-child {
+        width: 40px;
+      }
+      tr > td:not(:first-child) {
+        text-align: left;
+      }
+    }
+  }
+}
+
+.row {
+  &.row-two-column {
+    .table-content-wrapper {
+      .ui-datatable {
+        .ui-datatable-tablewrapper {
+          padding-left: 8px;
+          padding-bottom: 32px;
+          min-height: 340px;
+          box-sizing: content-box;
+          @media screen and (max-width: 1200px) {
+            padding-bottom: 0;
+            min-height: 0;
+          }
         }
 
         .ui-datatable-header {
-            display: flex;
-            background: $white;
-            border-bottom: 1px solid #eee;
-            height: $navbar-height;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 32px;
-
-            .table-name {
-                font-size: 1.2em;
-            }
-
-            .table-options {
-                display: flex;
-
-                .option {
-                    margin: 0 8px;
-                }
-            }
+          width: 200%;
+          @media screen and (max-width: 1200px) {
+            width: 100%;
+            padding: 0 12px;
+          }
         }
+      }
     }
-    .filter-slider {        
-        width: 300px;
-        // display: flex !important;
-        align-content: center;
-        justify-content: center;
-        padding: 24px;
-        background: $white;
-        right: -350px;
-        background: #eee;
-        position: fixed;
-        transition: right 0.5s;        
-        box-shadow: 1px 9px 35px -12px rgba(0, 0, 0, 0.75);
-        height: 100%;
-        overflow-y: scroll;
-        &.show {
-            right: 0;
-        }
-
-        .close {
-            display: flex;
-            flex-direction: column;
-            .top {
-                display: flex;
-                justify-content: space-between;
-                i {
-                    cursor: pointer;
-                }
-            }
-
-            .bottom {
-                font-size: 0.9em;
-                color: #999;
-            }
-        }
-
-        .fixed-first-td {
-            tr > td:first-child {
-                width: 40px;
-            }
-            tr > td:not(:first-child) {
-                text-align: left;
-            }
-        }
-    }
+  }
 }
 
 // table tr th,
@@ -390,48 +443,50 @@
 
 th,
 td {
-    outline: none;
+  outline: none;
 }
 
-
 @media print {
-    // -webkit-print-color-adjust: exact;
-    // @page { size: landscape; }   
+  // -webkit-print-color-adjust: exact;
+  // @page { size: landscape; }
 
-    .ui-datatable-header {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;        
-        font-size: 16px;
-        .table-options {
-            display: none;
-        }
+  .ui-datatable-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    font-size: 16px;
+    .table-options {
+      display: none;
     }
+  }
 
-    .ui-paginator.ui-paginator-top,
-    .ui-paginator.ui-paginator-bottom {
-        display: none;        
+  .ui-paginator.ui-paginator-top,
+  .ui-paginator.ui-paginator-bottom {
+    display: none;
+  }
+
+  .ui-datatable-tablewrapper {
+    font-size: 14px;
+    width: 100%;
+    .ui-column-p-1,
+    .ui-column-p-2,
+    .ui-column-p-3,
+    .ui-column-p-4,
+    .ui-column-p-5,
+    .ui-column-p-6 {
+      display: table-cell;
     }
-
-    .ui-datatable-tablewrapper {
-        font-size: 14px;
-        width: 100%;
-        .ui-column-p-1,
-        .ui-column-p-2,
-        .ui-column-p-3,
-        .ui-column-p-4,
-        .ui-column-p-5,
-        .ui-column-p-6 {
-            display: table-cell;
-        }
-        th, td {
-            width: auto;
-        }
-        th {font-weight: 500;}        
+    th,
+    td {
+      width: auto;
     }
+    th {
+      font-weight: 500;
+    }
+  }
 
-    .ui-paginator.ui-paginator-top,
-    .ui-paginator.ui-paginator-bottom {
-        display: none !important;
-    }    
+  .ui-paginator.ui-paginator-top,
+  .ui-paginator.ui-paginator-bottom {
+    display: none !important;
+  }
 }

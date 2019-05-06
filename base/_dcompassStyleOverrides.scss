@@ -1,6 +1,6 @@
 html {
   .ui-outputpanel.ui-widget.mainContainer {
-    margin: 10px;
+    margin: 0 !important;
   }
 
   .ui-datatable table thead tr th,
@@ -36,13 +36,14 @@ html {
 
   .ui-selectonemenu.ui-state-focus,
   .ui-selectcheckboxmenu.ui-state-focus {
-    border: 0;
+    border: 0 !important;
   }
 
   .ui-selectcheckboxmenu .ui-selectcheckboxmenu-label {
     background: $white;
     padding: 9px !important;
-  }
+    padding-right: 24px !important;
+  }  
 
   .ui-datatable table thead tr th.ui-state-focus {
     box-shadow: none;
@@ -58,6 +59,7 @@ html {
   .ui-selectcheckboxmenu .ui-selectcheckboxmenu-trigger {
     border-bottom: 0 !important;
     background-color: transparent !important;
+    right: 12px;
   }
 
   .ui-selectcheckboxmenu .ui-selectcheckboxmenu-trigger.ui-state-hover,
@@ -82,5 +84,19 @@ html {
   .ui-selectonemenu.ui-state-focus,
   .ui-selectcheckboxmenu.ui-state-focus {
     border-bottom: none;
+  }
+
+  .ui-chkbox-box .ui-icon-check {
+    border-bottom: solid 3px $blue;
+    border-right: solid 3px $blue;
+  }
+
+
+  .ui-selectcheckboxmenu-panel {
+    box-shadow: 0 5px 10px rgba(0,0,0,0.8) !important;
+  }
+
+  .ui-selectonemenu-panel tr.ui-state-highlight td {
+    color: $blue !important;
   }
 }

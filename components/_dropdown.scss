@@ -18,7 +18,7 @@
     &.ui-selectonemenu {
         &.no-border {
             border: 0 !important;
-            min-width: 110px;
+            // min-width: 110px;
             width: auto !important;
 
             .ui-selectonemenu-trigger {
@@ -64,14 +64,14 @@
         cursor: pointer;
         padding-right: 0;
         vertical-align: top;
-        height: $form-input-height;
+        // height: $form-input-height;
         box-sizing: border-box;
         border: 1px solid $input-elements-border-color;
 
         .ui-selectonemenu-label {
             padding: 0 16px 0 10px;
             margin: 0;
-            height: 30px !important;           
+            // height: 30px !important;           
             background: white !important;
         }
 
@@ -107,7 +107,7 @@
 
         .ui-selectonemenu-trigger {
             width: 24px;
-
+            z-index: 3;
             &.ui-state-hover {
                 background: #ddd;
             }
@@ -139,7 +139,7 @@ html {
     .ui-selectonemenu-panel {
         background: $white;
         max-width: 358px !important;
-        
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8) !important;
         @media screen and (max-width: 425px) {
             max-width: 343px !important;
         }        

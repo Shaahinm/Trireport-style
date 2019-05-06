@@ -66,7 +66,7 @@
 
 .ui-menubutton {
   display: flex;
-  height: 40px;
+  height: 40px;  
 
   .ui-button-icon-left.ui-icon.ui-c.ui-icon-triangle-1-s {
     background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAh0lEQVQ4T93TMQrCUAzG8V9x8QziiYSuXdzFC7h4AcELOPQAdXYovZCHEATlgQV5GFTe1ozJlz/kS1IpjKqw3wQBVyy++JI0y1GTe7DCBbMAckeNIQKk/BanALBB+16LtnDELoMcsM/BESDlz2heDR3WePwKSLo5eoxz3z6NNcFD+vu3ij14Aqz/DxGbKB7CAAAAAElFTkSuQmCC")
@@ -128,13 +128,16 @@
   cursor: pointer;
 }
 
+
 .button-menu {
   position: relative;
   display: inline-block;  
   .icon-button {
     background: transparent;
     border: none;
-  }
+    display: flex;
+    justify-content: center;        
+  }  
 
   .content {
     display: none;
@@ -144,7 +147,7 @@
     background: #eee; 
     width: 180px;
     padding: 16px 0;
-    z-index: 1;
+    z-index: 4;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     .option {
         padding: 8px 0;
