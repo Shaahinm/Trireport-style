@@ -59,7 +59,7 @@
 
   .filters {
     display: flex;
-    height: $navbar-height;
+    height: 56px;
     align-items: center;
     // box-shadow: 1px 9px 35px -12px rgba(0, 0, 0, 0.75);
     border-top: 1px solid #eee;
@@ -149,5 +149,31 @@
         }
       }
     }
+  }
+}
+
+
+.fixed_report_buttons {
+  position: fixed;
+  background: transparent;
+  width: auto;
+  top: 12px;
+  left: 210px;
+  z-index: 5;
+
+  .dropdown.ui-selectonemenu .ui-selectonemenu-label {
+    background: black !important;
+    color: white !important;    
+  }
+
+  .dropdown.ui-selectonemenu {
+    margin: 0;
+    .ui-selectonemenu-trigger {
+      display: none;
+    }
+  }
+
+  svg {
+    fill: red;
   }
 }

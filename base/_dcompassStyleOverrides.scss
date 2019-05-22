@@ -99,4 +99,18 @@ html {
   .ui-selectonemenu-panel tr.ui-state-highlight td {
     color: $blue !important;
   }
+
+  .titleFontStyle {
+    font-size: 18px;
+  }
+
+  .titleStyle {
+    top: 13px;
+    left: 50px;
+    h2 {
+      height: 39px;
+      border-right: 1px solid white;
+      padding-right: 16px;
+    }
+  }
 }

@@ -41,17 +41,26 @@
   box-shadow: 1px 5px 10px 5px rgba(170, 170, 170, 1);
   white-space: nowrap;
   &.row-two-column {
+    .hidden {
+      display: none;
+    }
     .column {
       display: inline-block;
       width: 50%;
       vertical-align: middle;
+      white-space: normal;
+      &.full-width {
+        width: 100%;
+      }
       @media screen and (max-width: 1200px) {
         width: 100%;
         display: block;
       }
 
       &.column-chart-container {
-        padding-top: 0;
+        padding: 16px;
+        overflow-x: hidden;
+        padding-top: 0;        
         @media screen and (max-width: 1200px) {
           padding-top: 24px;
         }

@@ -313,12 +313,13 @@
       }
 
       tbody {
-        .ui-state-hover {
+        .ui-state-hover,
+        .ui-state-highlight {
           > td {
             background: $blue;
             color: $white;
           }
-        }
+        }        
       }
     }
 
@@ -409,7 +410,7 @@
       .ui-datatable {
         .ui-datatable-tablewrapper {
           padding-left: 8px;
-          padding-bottom: 32px;
+          // padding-bottom: 32px;
           min-height: 340px;
           box-sizing: content-box;
           @media screen and (max-width: 1200px) {
@@ -423,6 +424,15 @@
           @media screen and (max-width: 1200px) {
             width: 100%;
             padding: 0 12px;
+          }
+        }
+      }
+    }
+    .column.full-width {
+      .table-content-wrapper {
+        .ui-datatable {
+          .ui-datatable-header {
+            width: 100%;
           }
         }
       }
