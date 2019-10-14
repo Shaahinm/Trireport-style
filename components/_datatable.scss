@@ -27,7 +27,8 @@
             th {
               .ui-column-title {
                 font-weight: 500;
-                color: #bbb;
+                color: rgba(0, 0, 0, 0.9);
+                font-family: RobotoMedium;
               }
             }
           }
@@ -68,7 +69,7 @@
             // }
             overflow: hidden;
             border: 0;
-            line-height: 32px;
+            // line-height: 32px;
             cursor: move;
 
             &.inout-column {
@@ -175,6 +176,7 @@
               font-size: 14px;
               font-weight: 500;
               color: rgba(0, 0, 0, 0.7);
+              display: inline-block;
             }
 
             &.left-aligned {
@@ -226,9 +228,13 @@
 
           td {
             border: 0;
-            padding: 8px 34px !important;
+            // padding: 8px 34px !important;
             // line-height: 32px;
             font-size: 0.9em;
+            text-align: initial;
+            @media screen and (max-width: 560px) {
+              text-align: left !important;
+            }
             &.inout-column {
               text-align: center;
               padding: 20px 8px;
@@ -319,7 +325,7 @@
             background: $blue;
             color: $white;
           }
-        }        
+        }
       }
     }
 
@@ -356,6 +362,7 @@
 
     .ui-datatable-tablewrapper {
       padding-left: 8px;
+      max-height: 618px;
     }
   }
   .filter-slider {
@@ -368,12 +375,21 @@
     right: -350px;
     background: #eee;
     position: fixed;
-    transition: right 0.5s;
+    transition: right 250ms;
     box-shadow: 1px 9px 35px -12px rgba(0, 0, 0, 0.75);
     height: 100%;
     overflow-y: scroll;
+    z-index: 4;
     &.show {
       right: 0;
+    }
+
+    .ui-selectmanycheckbox label {
+      color: rgba(0, 0, 0, 0.7);
+    }
+
+    .ui-chkbox .ui-chkbox-box {
+      border: solid 2px  rgba(0, 0, 0, 0.7);
     }
 
     .close {
@@ -382,13 +398,16 @@
       .top {
         display: flex;
         justify-content: space-between;
+        span {
+          color: rgba(0, 0, 0, 0.7);
+        }
         i {
           cursor: pointer;
         }
       }
 
       .bottom {
-        font-size: 0.9em;
+        font-size: 14px;
         color: #999;
       }
     }
@@ -499,4 +518,48 @@ td {
   .ui-paginator.ui-paginator-bottom {
     display: none !important;
   }
+}
+
+.special-table {
+  margin: 0 auto;
+  table-layout: auto;
+  table {
+    width: auto;
+    min-width: 1200px;
+    @media screen and (max-width: 1200px) {
+      min-width: none;
+    }
+  }
+
+  .ui-datatable-tablewrapper {
+    display: flex;
+    justify-content: center;
+    @media screen and (max-width: 1200px) {
+      justify-content: flex-start;
+    }
+  }
+
+  .ui-datatable-sticky {
+    top: -150px !important;
+    display: none !important;
+    width: 0 !important;
+    margin-top: 2px;
+    &.ui-sticky {
+      display: block !important;
+    }
+  }
+}
+
+.row.special {
+  max-width: max-content;
+  min-width: 1200px;
+  @media screen and (max-width: 1200px) {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+  }
+}
+
+.ui-datatable-scrollable-theadclone tr {
+  visibility: collapse;
 }

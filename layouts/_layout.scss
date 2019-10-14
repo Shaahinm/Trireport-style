@@ -7,7 +7,7 @@
     border: 0;
     border-radius: 0;
     background: transparent;
-    @media (max-width: 1150px) { 
+    @media (max-width: 1150px) {
       height: auto;
       flex-direction: column;
     }
@@ -19,7 +19,7 @@
   border: 0;
   border-radius: 0;
   background: transparent;
-  @media (max-width: 1150px) { 
+  @media (max-width: 1150px) {
     height: auto;
     justify-content: center;
   }
@@ -47,7 +47,7 @@
     .column {
       display: inline-block;
       width: 50%;
-      vertical-align: middle;
+      vertical-align: top;
       white-space: normal;
       &.full-width {
         width: 100%;
@@ -60,11 +60,17 @@
       &.column-chart-container {
         padding: 16px;
         overflow-x: hidden;
-        padding-top: 0;        
+        padding-top: 80px;
         @media screen and (max-width: 1200px) {
           padding-top: 24px;
         }
       }
     }
+  }
+
+  &.full-width {
+    max-width: none;
+    margin: 0 24px;
+    width: auto;
   }
 }

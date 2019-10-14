@@ -70,10 +70,44 @@
     }
   }
 
+  .ui-paginator-last {
+    background: url("/dC/resources/images/double-right-arrow.png") no-repeat
+      center;
+    height: 24px;
+    line-height: 24px;
+    display: flex;
+    flex: 0 0 24px;
+    background-size: 16px;
+    &.ui-state-disabled {
+      cursor: not-allowed !important;
+    }
+    .ui-icon {
+      width: 24px;
+      background-image: none;
+    }
+  }
+  .ui-paginator-first {
+    background: url("/dC/resources/images/double-left-arrow.png") no-repeat
+      center;
+    height: 24px;
+    line-height: 24px;
+    display: flex;
+    flex: 0 0 24px;
+    background-size: 16px;
+    &.ui-state-disabled {
+      cursor: not-allowed !important;
+    }
+    .ui-icon {
+      width: 24px;
+      background-image: none;
+    }
+  }
+
   .ui-paginator-page {
     font-weight: 500;
     font-size: 14px;
     width: 28px;
+    color: rgb(61, 61, 61);
   }
 
   .ui-state-active,
@@ -82,12 +116,16 @@
   }
 
   select {
-    width: 50px;
-    height: $form-input-height;
+    width: auto;    
     border: 1px solid #ddd;
-    background: #eee;
-    display: none;
-  }
+    background: white;
+    color: rgb(61, 61, 61) !important; 
+    // display: none;
+  }    
+
+  // option:hover, option:focus, option:active, option:checked {
+  //   background: #eee;
+  // }
 }
 
 .exporter {

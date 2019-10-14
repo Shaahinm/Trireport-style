@@ -68,10 +68,29 @@
         box-sizing: border-box;
         border: 1px solid $input-elements-border-color;
 
+        &.header-dropdown {
+            border: 1px solid $input-elements-border-color !important;
+            height: 32px;
+            .ui-selectonemenu-label {
+                padding: 0 28px 0 10px !important;
+                margin: 0 !important;
+                line-height: 30px !important;
+                font-size: 15px !important;
+                font-weight: 500 !important;
+            }
+
+            .ui-selectonemenu-trigger { 
+                .ui-icon {
+                    margin-top: 9px !important;
+                }
+            }
+        }
+
         .ui-selectonemenu-label {
             padding: 0 16px 0 10px;
             margin: 0;
-            // height: 30px !important;           
+            // height: 30px !important;       
+            color: #546e7a;    
             background: white !important;
         }
 
@@ -114,18 +133,7 @@
 
             .ui-icon {
                 background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAh0lEQVQ4T93TMQrCUAzG8V9x8QziiYSuXdzFC7h4AcELOPQAdXYovZCHEATlgQV5GFTe1ozJlz/kS1IpjKqw3wQBVyy++JI0y1GTe7DCBbMAckeNIQKk/BanALBB+16LtnDELoMcsM/BESDlz2heDR3WePwKSLo5eoxz3z6NNcFD+vu3ij14Aqz/DxGbKB7CAAAAAElFTkSuQmCC') no-repeat center;
-                width: 24px;
-                // padding: 0px 12px !important;
-                // font-size: 16px;
-                // color: #ffffff !important;
-                // text-shadow: none;
-                // z-index: 100;
-                // background-color: white;
-                // border-bottom: none !important;
-                // border-bottom-right-radius: 0px !important;
-                // border-top-right-radius: 0px !important;
-                // border-bottom-left-radius: 0px !important;
-                // border-top-left-radius: 0px !important;
+                width: 24px;             
             }
         }
     }

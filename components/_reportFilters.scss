@@ -84,10 +84,9 @@
       align-items: center;
       justify-content: space-between;
       width: 100%;
-
+      padding: 0 24px;
       .filterBy {
         line-height: 32px;
-        margin-left: 24px;
       }
 
       @media (max-width: 1150px) {
@@ -102,9 +101,9 @@
         flex: 1;
         padding: 0 24px 0 16px;
 
-        .ui-selectonemenu {
-          margin: 0 24px;
-        }
+        // .ui-selectonemenu {
+        //   margin: 0 24px;
+        // }
       }
 
       .reset-button {
@@ -152,18 +151,17 @@
   }
 }
 
-
 .fixed_report_buttons {
   position: fixed;
   background: transparent;
   width: auto;
-  top: 12px;
-  left: 210px;
+  top: 13px;
+  left: 150px;
   z-index: 5;
 
   .dropdown.ui-selectonemenu .ui-selectonemenu-label {
     background: black !important;
-    color: white !important;    
+    color: white !important;
   }
 
   .dropdown.ui-selectonemenu {
@@ -175,5 +173,51 @@
 
   svg {
     fill: red;
+  }
+}
+
+.applied-filters {
+  width: 100%;
+  display: none;
+  background: white;
+  max-width: 1600px;
+  padding: 16px 24px;
+  margin: auto;
+  box-shadow: 1px 5px 10px 5px #aaaaaa;
+  font-size: 12px;
+  margin-bottom: 16px;
+  .cat {
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .filter {
+    font-weight: normal;
+  }
+  &.full-width {
+    max-width: none;
+    margin: 0 24px 24px;
+    width: auto;
+  }
+}
+
+.selectOneButton {
+  border: none;
+  .ui-button-text-only {
+    background: black;
+    font-size: 14px;
+    .ui-button-text {
+      padding: 10px !important;
+    }
+    &.ui-state-active {
+      background: black !important;
+      color: $blue !important;
+    }
+  }
+}
+
+.shortTextbox50 {
+  width: 50px !important;
+  input {
+    width: 50px;
   }
 }

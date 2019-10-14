@@ -40,7 +40,7 @@ html {
   }
 
   .ui-selectcheckboxmenu .ui-selectcheckboxmenu-label {
-    background: $white;
+    background: transparent;
     padding: 9px !important;
     padding-right: 24px !important;
   }  
@@ -112,5 +112,12 @@ html {
       border-right: 1px solid white;
       padding-right: 16px;
     }
+  }
+  .ui-paginator .ui-paginator-rpp-options.ui-state-focus {
+    background: #eee !important;
+  }
+
+  #form\:table {
+    width: 100%;
   }
 }
